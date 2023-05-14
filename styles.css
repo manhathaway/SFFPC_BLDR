@@ -1,3 +1,5 @@
+/* Preliminary (START) */
+
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 :root {
@@ -27,77 +29,8 @@ html {
     padding: 0;
 }
 
-body {
-    background-color: var(--background);
-    font-family: "Rajdhani", sans-serif;
-    font-size: 62.5%;
-    font-weight: lighter;
-}
-
 main {
     margin: 0 100px;
-}
-
-#header {
-    border-bottom: 3px solid var(--dividers);
-    margin: 0 75px;
-}
-
-#logo {
-    width: 125px;
-}
-
-#content {
-    margin: 50px;
-}
-
-#content, #content * {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-#nav-links {
-    gap: 3vw;
-    position: relative;
-    bottom: -9.5px;
-}
-
-.nav-link {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: var(--headings);
-    text-decoration: none;
-}
-
-#main-image {
-    margin: 100px 0;
-    width: 100vw;
-}
-
-.heading,
-#about,
-#testimonials-grid,
-#buy-grid {
-    margin: 0 auto;
-}
-
-#about-body {
-    width: 100%;
-}
-
-.heading {
-    text-align: center;
-    font-size: 1.6rem;
-    letter-spacing: 1px;
-    background-color: var(--headings);
-    color: var(--headings-text);
-    width: 250px;
-    padding: 10px 0;
-    border-radius: 5px 25px;
-    margin-bottom: 25px;
-    
 }
 
 .body {
@@ -110,19 +43,46 @@ main {
     margin-bottom: 50px;
 }
 
-#testimonials > #testimonials-grid > .body {
-    padding: 50px 25px;
-    margin-bottom: 0;
+body {
+    background-color: var(--background);
+    font-family: "Rajdhani", sans-serif;
+    font-size: 62.5%;
+    font-weight: lighter;
 }
 
-#testimonials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    margin-bottom: 50px;
+/* Preliminary (END) */
+
+/* General Element Styling (START) */
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dividers);
+    position: relative;
+    bottom: -50px;
 }
 
+.heading {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    background-color: var(--headings);
+    color: var(--headings-text);
+    width: 250px;
+    padding: 10px 0;
+    border-radius: 5px 25px;
+    margin: 0 auto 25px auto;
+    
+}
+
+/* General Element Styling (END) */
+
+/* Multi-selectors (START) */
+
+#about,
+#testimonials-grid,
 #buy-grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    margin-bottom: 100px;
+    margin: 0 auto;
 }
 
 #about,
@@ -137,17 +97,77 @@ main {
     gap: 30px;
 }
 
-.divider {
-    width: 100%;
-    height: 3px;
-    background-color: var(--dividers);
-    position: relative;
-    bottom: -50px;
+.buy-grid-heading,
+.spec-heading {
+    font-weight: bold;
 }
+
+.buy-grid-heading,
+.specs {
+    border-radius: 5px 15px;
+}
+
+/* Multi-selectors (END) */
+
+/* Header (START) */
+
+#logo {
+    width: 125px;
+}
+
+.nav-link {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--headings);
+    text-decoration: none;
+}
+
+#nav-links {
+    gap: 3vw;
+    position: relative;
+    bottom: -9.5px;
+}
+
+#content {
+    margin: 50px;
+}
+
+#content, #content * {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#header {
+    border-bottom: 3px solid var(--dividers);
+    margin: 0 75px;
+}
+
+/* Header (END) */
+
+/* Image (START) */
+
+#main-image {
+    margin: 100px 0;
+    width: 100vw;
+}
+
+/* Image (END) */
+
+/* About (START) */
 
 #about-body p:first-of-type {
     margin-bottom: 25px;
 }
+
+#about-body {
+    width: 100%;
+}
+
+/* About (END) */
+
+/* Testimonials (START) */
 
 .profile-icon {
     padding: 0 5px 10px 5px;
@@ -160,17 +180,19 @@ main {
     margin-bottom: 25px;
 }
 
-#buy-grid > .body {
-    font-size: 1.2rem;
-    width: 100%;
-    margin: 0;
-    text-align: center;
+#testimonials-grid > .body {
+    padding: 50px 25px;
+    margin-bottom: 0;
 }
 
-.buy-grid-heading,
-.spec-heading {
-    font-weight: bold;
+#testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-bottom: 50px;
 }
+
+/* Testimonials (END) */
+
+/* Buy Yours (START) */
 
 .buy-grid-heading {
     font-size: 1.4rem;
@@ -178,6 +200,42 @@ main {
     padding: 5px 0;
     width: 125px;
     margin: 0 auto;
+}
+
+.buy-grid-subheading {
+    margin-top: 10px;
+    font-weight: initial;
+}
+
+.buy-icons {
+    margin: 35px 0;
+}
+
+.specs-heading {
+    padding-bottom: 15px;
+    border-bottom: 2px solid;
+}
+
+.specs {
+    border: 2px solid;
+    padding: 20px 20px 30px 20px;
+}
+
+.specs-line:first-of-type {
+    margin: 0 15px;
+}
+
+.specs-line:not(:first-of-type) {
+    margin: 15px 15px 0 15px;
+}
+
+.specs-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specs-body {
+    margin-top: 30px;
 }
 
 .configure {
@@ -190,14 +248,16 @@ main {
     border-radius: 5px 15px;
 }
 
-.buy-grid-subheading {
-    margin-top: 10px;
-    font-weight: initial;
+#buy-grid > .body {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0;
+    text-align: center;
 }
 
-.buy-grid-heading,
-.specs {
-    border-radius: 5px 15px;
+#buy-grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-bottom: 100px;
 }
 
 #aqua {
@@ -240,51 +300,9 @@ main {
     color: var(--glassia-text);
 }
 
-.buy-icons {
-    margin: 35px 0;
-}
+/* Buy Yours (END) */
 
-.specs {
-    border: 2px solid;
-    padding: 20px 20px 30px 20px;
-}
-
-.specs-heading {
-    padding-bottom: 15px;
-    border-bottom: 2px solid;
-}
-
-.specs-body {
-    margin-top: 30px;
-}
-
-.specs-line {
-    display: flex;
-    justify-content: space-between;
-}
-
-.specs-line:first-of-type {
-    margin: 0 15px;
-}
-
-.specs-line:not(:first-of-type) {
-    margin: 15px 15px 0 15px;
-}
-
-footer {
-    margin: 0 75px;
-    border-top: 3px solid var(--dividers);
-}
-
-#footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-    margin: 0 50px;
-    color: var(--body-text);
-    font-size: 1.2rem;
-}
+/* Footer (START) */
 
 #footer-left h3 {
     margin-bottom: 10px;
@@ -301,6 +319,23 @@ footer {
 #footer-logo {
     width: 100px;
 }
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    margin: 0 50px;
+    color: var(--body-text);
+    font-size: 1.2rem;
+}
+
+footer {
+    margin: 0 75px;
+    border-top: 3px solid var(--dividers);
+}
+
+/* Footer (END) */
 
 @media screen and (min-width: 2125px) {
     #about {
