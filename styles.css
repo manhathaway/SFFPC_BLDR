@@ -246,7 +246,7 @@ body {
 	cursor: pointer;
     width: 125px;
     font-size: 1rem;
-    margin-top: 35px;
+    margin-top: 50px;
     border-radius: 5px 15px;
 }
 
@@ -339,7 +339,74 @@ footer {
 
 /* Footer (END) */
 
-@media screen and (min-width: 2125px) {
+@media screen and (max-width: 500px) {
+    #logo,
+    #footer-logo {
+        width: 100px;
+    }
+
+    #main-image {
+        margin: 50px 0;
+    }
+    
+    .nav-link,
+    .heading,
+    .profile-heading {
+        font-size: 1.4rem;
+    }
+    
+    #about-body *,
+    #testimonials-grid > .body p,
+    .buy-grid-heading,
+    .buy-grid-subheading,
+    .specs-heading {
+        font-size: 1.2rem;
+    }
+
+    .specs-line {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    
+    #header,
+    footer {
+        margin: 0 25px;
+    }
+    
+    #content {
+        margin:  25px 0;
+    }
+    
+    .divider {
+        bottom: -35px;
+    }
+    
+    main {
+        margin: 0 25px;
+    }
+
+    .body,
+    #testimonials-grid > .body {
+        padding: 35px 25px;
+    }
+
+    .configure {
+        margin-top: 35px;
+    }
+
+    #buy-grid,
+    #testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    #footer {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 2245px) {
     #about {
         width: calc(48% + 25px);
         max-width: 1190px;
