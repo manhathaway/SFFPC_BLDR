@@ -79,17 +79,13 @@ body {
 
 /* General Element Styling (END) */
 
-/* Multi-selectors (START) */
+/* Multi-Section Selectors (START) */
 
-#about,
+#about-grid,
 #testimonials-grid,
-#buy-grid {
+#buy-grid,
+#disclaimer-grid {
     margin: 0 auto;
-}
-
-#about,
-#testimonials-grid,
-#buy-grid {
     max-width: 1000px;
 }
 
@@ -109,7 +105,7 @@ body {
     border-radius: 5px 15px;
 }
 
-/* Multi-selectors (END) */
+/* Multi-Section Selectors (END) */
 
 /* Header (START) */
 
@@ -152,7 +148,7 @@ body {
 
 #main-image {
     margin: 100px 0;
-    width: 100vw;
+    width: calc(100vw - 15px);
 }
 
 /* Image (END) */
@@ -160,11 +156,7 @@ body {
 /* About (START) */
 
 #about-body p:first-of-type {
-    margin-bottom: 25px;
-}
-
-#about-body {
-    width: 100%;
+    margin-bottom: 15px;
 }
 
 /* About (END) */
@@ -259,7 +251,7 @@ body {
 
 #buy-grid {
     grid-template-columns: repeat(auto-fit, minmax(485px, 1fr));
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 #aqua {
@@ -304,6 +296,20 @@ body {
 
 /* Buy Yours (END) */
 
+/* Disclaimer (START) */
+
+#disclaimer-body {
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: var(--boxes);
+    color: var(--body-text);
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: 100px;
+}
+
+/* Disclaimer (END) */
+
 /* Footer (START) */
 
 #footer-left h3 {
@@ -339,32 +345,37 @@ footer {
 
 /* Footer (END) */
 
-@media screen and (max-width: 500px) {
-    #logo,
-    #footer-logo {
-        width: 100px;
+@media screen and (min-width: 2245px) {
+
+    #about-body {
+        grid-area: about;
     }
 
-    #main-image {
-        margin: 50px 0;
-    }
-    
-    .nav-link,
-    .heading,
-    .profile-heading {
-        font-size: 1.4rem;
-    }
-    
-    #about-body *,
-    #testimonials-grid > .body p,
-    .buy-grid-heading,
-    .buy-grid-subheading,
-    .specs-heading {
-        font-size: 1.2rem;
+    #about-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(370px, 1fr));
+        grid-template-areas:
+            " . about about . ";
+        gap: 30px;
     }
 
-    .specs-line {
-        font-size: 1rem;
+    #disclaimer-body {
+        grid-area: disclaimer;
+    }
+
+    #disclaimer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(485px, 1fr));
+        grid-template-areas:
+            " . disclaimer disclaimer . ";
+        gap: 30px;
+    }
+    
+    #about-grid,
+    #testimonials-grid,
+    #buy-grid,
+    #disclaimer-grid {
+        max-width: 2425px;
     }
 }
 
@@ -406,14 +417,31 @@ footer {
     }
 }
 
-@media screen and (min-width: 2245px) {
-    #about {
-        width: calc(48% + 25px);
-        max-width: 1190px;
+@media screen and (max-width: 500px) {
+    #logo,
+    #footer-logo {
+        width: 100px;
     }
 
-    #testimonials-grid,
-    #buy-grid {
-        max-width: 2425px;
+    #main-image {
+        margin: 50px 0;
+    }
+    
+    .nav-link,
+    .heading,
+    .profile-heading {
+        font-size: 1.4rem;
+    }
+    
+    #about-body *,
+    #testimonials-grid > .body p,
+    .buy-grid-heading,
+    .buy-grid-subheading,
+    .specs-heading {
+        font-size: 1.2rem;
+    }
+
+    .specs-line {
+        font-size: 1rem;
     }
 }
