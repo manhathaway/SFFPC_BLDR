@@ -123,8 +123,6 @@ body {
 
 #nav-links {
     gap: 3vw;
-    position: relative;
-    bottom: -9.5px;
 }
 
 #content {
@@ -134,7 +132,7 @@ body {
 #content, #content * {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 #header {
@@ -346,7 +344,13 @@ footer {
 /* Footer (END) */
 
 @media screen and (min-width: 2245px) {
-
+    #about-grid,
+    #testimonials-grid,
+    #buy-grid,
+    #disclaimer-grid {
+        max-width: 2425px;
+    }
+    
     #about-body {
         grid-area: about;
     }
@@ -370,32 +374,26 @@ footer {
             " . disclaimer disclaimer . ";
         gap: 30px;
     }
-    
-    #about-grid,
-    #testimonials-grid,
-    #buy-grid,
-    #disclaimer-grid {
-        max-width: 2425px;
+}
+
+@media screen and (max-width: 800px) {
+    #content {
+        margin:  45px 0;
+    }
+
+    #footer {
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 685px) {
-    
-    #header,
-    footer {
+    main {
         margin: 0 25px;
     }
-    
-    #content {
-        margin:  25px 0;
-    }
+
     
     .divider {
         bottom: -35px;
-    }
-    
-    main {
-        margin: 0 25px;
     }
 
     .body,
@@ -403,13 +401,26 @@ footer {
         padding: 35px 25px;
     }
 
-    .configure {
-        margin-top: 35px;
-    }
-
     #buy-grid,
     #testimonials-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    #header,
+    footer {
+        margin: 0 25px;
+    }
+    
+    #logo {
+        width: 125px;
+    }
+
+    .nav-link * {
+        width: 55px;
+    }
+
+    .configure {
+        margin-top: 35px;
     }
 
     #footer {
@@ -418,15 +429,6 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-    #logo,
-    #footer-logo {
-        width: 100px;
-    }
-
-    #main-image {
-        margin: 50px 0;
-    }
-    
     .nav-link,
     .heading,
     .profile-heading {
@@ -439,6 +441,18 @@ footer {
     .buy-grid-subheading,
     .specs-heading {
         font-size: 1.2rem;
+    }
+    
+    #logo {
+        width: 100px;
+    }
+
+    .nav-link * {
+        width: 45px;
+    }
+
+    #main-image {
+        margin: 50px 0;
     }
 
     .specs-line {
