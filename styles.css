@@ -83,24 +83,24 @@ body {
 
 #about-grid,
 #testimonials-grid,
-#buy-grid,
+#builds-grid,
 #disclaimer-grid {
     margin: 0 auto;
     max-width: 1000px;
 }
 
 #testimonials-grid,
-#buy-grid {
+#builds-grid {
     display: grid;
     gap: 30px;
 }
 
-.buy-grid-heading,
+.builds-grid-heading,
 .spec-heading {
     font-weight: bold;
 }
 
-.buy-grid-heading,
+.builds-grid-heading,
 .specs {
     border-radius: 5px 15px;
 }
@@ -184,9 +184,9 @@ body {
 
 /* Testimonials (END) */
 
-/* Buy Yours (START) */
+/* builds Yours (START) */
 
-.buy-grid-heading {
+.builds-grid-heading {
     font-size: 1.4rem;
     letter-spacing: 1.5px;
     padding: 5px 0;
@@ -194,12 +194,12 @@ body {
     margin: 0 auto;
 }
 
-.buy-grid-subheading {
+.builds-grid-subheading {
     margin-top: 10px;
     font-weight: initial;
 }
 
-.buy-icons {
+.builds-icons {
     margin: 35px 0;
 }
 
@@ -240,14 +240,14 @@ body {
     border-radius: 5px 15px;
 }
 
-#buy-grid > .body {
+#builds-grid > .body {
     font-size: 1.2rem;
     width: 100%;
     margin: 0;
     text-align: center;
 }
 
-#buy-grid {
+#builds-grid {
     grid-template-columns: repeat(auto-fit, minmax(485px, 1fr));
     margin-bottom: 25px;
 }
@@ -268,31 +268,31 @@ body {
     color: var(--glassia);
 }
 
-#aqua > .buy-grid-heading,
+#aqua > .builds-grid-heading,
 #aqua > .configure {
     background-color: var(--aqua);
     color: var(--aqua-text);
 }
 
-#terra > .buy-grid-heading,
+#terra > .builds-grid-heading,
 #terra > .configure {
     background-color: var(--terra);
     color: var(--terra-text);
 }
 
-#fuoco > .buy-grid-heading,
+#fuoco > .builds-grid-heading,
 #fuoco > .configure {
     background-color: var(--fuoco);
     color: var(--fuoco-text);
 }
 
-#glassia > .buy-grid-heading,
+#glassia > .builds-grid-heading,
 #glassia > .configure {
     background-color: var(--glassia);
     color: var(--glassia-text);
 }
 
-/* Buy Yours (END) */
+/* builds Yours (END) */
 
 /* Disclaimer (START) */
 
@@ -346,7 +346,7 @@ footer {
 @media screen and (min-width: 2245px) {
     #about-grid,
     #testimonials-grid,
-    #buy-grid,
+    #builds-grid,
     #disclaimer-grid {
         max-width: 2425px;
     }
@@ -401,7 +401,7 @@ footer {
         padding: 35px 25px;
     }
 
-    #buy-grid,
+    #builds-grid,
     #testimonials-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
@@ -437,11 +437,17 @@ footer {
     
     #about-body *,
     #testimonials-grid > .body p,
-    .buy-grid-heading,
-    .buy-grid-subheading,
+    .builds-grid-heading,
+    .builds-grid-subheading,
     .specs-heading,
     #disclaimer-body p {
         font-size: 1.2rem;
+    }
+
+    #testimonials-grid,
+    #builds-grid {
+        grid-template-columns: repeat(4, 100%);
+        overflow-x: scroll;
     }
     
     #logo {
