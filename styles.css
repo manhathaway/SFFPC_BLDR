@@ -439,7 +439,8 @@ footer {
     #testimonials-grid > .body p,
     .buy-grid-heading,
     .buy-grid-subheading,
-    .specs-heading {
+    .specs-heading,
+    #disclaimer-body p {
         font-size: 1.2rem;
     }
     
