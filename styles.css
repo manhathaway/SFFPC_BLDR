@@ -81,7 +81,6 @@ body {
 
 /* Multi-Section Selectors (START) */
 
-#about-grid,
 #testimonials-grid,
 #builds-grid,
 #disclaimer-grid {
@@ -145,8 +144,10 @@ body {
 /* Image (START) */
 
 #main-image {
-    margin: 100px 0;
-    width: calc(100vw - 15px);
+    display: block;
+    margin: 100px auto;
+    width: 85%;
+    max-width: 750px;
 }
 
 /* Image (END) */
@@ -401,8 +402,16 @@ footer {
         width: 55px;
     }
 
+    #main-image {
+        margin: 75px auto;
+    }
+
     .configure {
         margin-top: 35px;
+    }
+
+    #disclaimer-body {
+        margin-bottom: 75px;
     }
 }
 
@@ -443,6 +452,10 @@ footer {
         width: 100px;
     }
 
+    #main-image {
+        margin: 50px auto;
+    }
+
     .nav-link * {
         width: 45px;
     }
@@ -473,10 +486,3 @@ footer {
         padding: 35px 0;
     }
 }
-
-@media screen and (max-width: 450px) {
-    #main-image {
-        width: 100vw;
-    }
-}
-
