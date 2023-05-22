@@ -213,11 +213,13 @@ body {
     padding: 20px 20px 30px 20px;
 }
 
-.specs-line:first-of-type {
+.cpu {
     margin: 0 15px;
 }
 
-.specs-line:not(:first-of-type) {
+.ram,
+.storage,
+.gpu {
     margin: 15px 15px 0 15px;
 }
 
@@ -365,22 +367,22 @@ footer {
     #content-header {
         margin:  45px 0;
     }
-
-    #footer {
-        margin: 0;
-    }
 }
 
 @media screen and (max-width: 685px) {
     main {
         margin: 0 25px;
     }
-
     
     .divider {
         bottom: -35px;
     }
 
+    #header,
+    footer {
+        margin: 0 25px;
+    }
+    
     .body,
     #testimonials-grid > .body {
         padding: 35px 25px;
@@ -389,11 +391,6 @@ footer {
     #builds-grid,
     #testimonials-grid {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-    
-    #header,
-    footer {
-        margin: 0 25px;
     }
     
     #logo {
@@ -407,15 +404,11 @@ footer {
     .configure {
         margin-top: 35px;
     }
-
-    #footer {
-        margin: 0;
-    }
 }
 
 @media screen and (max-width: 500px) {
-    footer {
-        padding: 35px 0;
+    main {
+        margin: 0;
     }
     
     .nav-link,
@@ -424,6 +417,11 @@ footer {
         font-size: 1.4rem;
     }
     
+    #about,
+    #disclaimer-grid {
+        margin: 0 25px;
+    }
+
     #about-body *,
     #testimonials-grid > .body p,
     .builds-grid-heading,
@@ -436,7 +434,9 @@ footer {
     #testimonials-grid,
     #builds-grid {
         grid-template-columns: repeat(4, 100%);
+        grid-auto-flow: column;
         overflow-x: scroll;
+        padding: 0 25px 25px 25px;
     }
     
     #logo {
@@ -455,7 +455,21 @@ footer {
         font-size: 1rem;
     }
 
+    .cpu {
+        margin: 0;
+    }
+    
+    .ram,
+    .storage,
+    .gpu {
+        margin: 15px 0 0 0;
+    }
+
     #disclaimer-body {
         margin-bottom: 50px;
+    }
+
+    footer {
+        padding: 35px 0;
     }
 }
