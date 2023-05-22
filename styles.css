@@ -473,3 +473,11 @@ footer {
         padding: 35px 0;
     }
 }
+
+@media screen and (max-width: 450px) {
+    #main-image {
+        position: relative;
+        right: 25px;
+    }
+}
+
