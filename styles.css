@@ -262,6 +262,10 @@ body {
     margin-bottom: 25px;
 }
 
+.builds-icons {
+    width: 300px;
+}
+
 #aqua {
     color: var(--aqua);
 }
