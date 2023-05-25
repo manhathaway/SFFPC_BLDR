@@ -494,3 +494,9 @@ footer {
         padding: 35px 0;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .builds-icons {
+        width: 200px;
+    }
+}
