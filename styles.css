@@ -209,6 +209,7 @@ body {
 
 .builds-icons {
     margin: 35px 0;
+    width: 250px;
 }
 
 .specs-heading {
@@ -260,10 +261,6 @@ body {
 #builds-grid {
     grid-template-columns: repeat(auto-fit, minmax(485px, 1fr));
     margin-bottom: 25px;
-}
-
-.builds-icons {
-    width: 300px;
 }
 
 #aqua {
@@ -497,6 +494,6 @@ footer {
 
 @media screen and (max-width: 400px) {
     .builds-icons {
-        width: 200px;
+        width: 60vw;
     }
 }
