@@ -80,7 +80,7 @@ body {
 /* Multi-Section Selectors */
 #header-buttons,
 #nav-buttons {
-    gap: 3vw;
+    gap: 25px;
 }
 
 #about-grid,
@@ -331,7 +331,6 @@ footer {
 #nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 3vw;
     position: sticky;
     bottom: 0;
     padding: 20px 0;
@@ -390,6 +389,11 @@ footer {
     footer {
         margin: 0 25px;
     }
+
+    #header-buttons,
+    #nav-buttons {
+        gap: 15px;
+    }
     
     .body,
     #testimonials-grid > .body {
@@ -420,6 +424,10 @@ footer {
 
     #disclaimer-body {
         margin-bottom: 75px;
+    }
+
+    #nav-buttons {
+        padding: 15px 0;
     }
 }
 
