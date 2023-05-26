@@ -490,14 +490,13 @@ footer {
     footer {
         padding: 35px 0;
     }
-}
 
-@media screen and (max-width: 400px) {
     #main-image {
-        width: 75vw;
+        width: 250px;
         max-width: none;
-        height: 55.15vw;
+        height: 183.5px;
         max-height: none;
+        outline: 1px solid red;
     }
     
     .builds-icons {
