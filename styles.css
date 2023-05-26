@@ -134,9 +134,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     margin: 100px auto;
-    width: 50vw;
+    width: 75vw;
     max-width: 675px;
-    height: 36.75vw;
+    height: 55.15vw;
     max-height: 495px;
 
     animation-name: slideshow;
@@ -493,6 +493,13 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
+    #main-image {
+        width: 75vw;
+        max-width: none;
+        height: 55.15vw;
+        max-height: none;
+    }
+    
     .builds-icons {
         width: 60vw;
     }
