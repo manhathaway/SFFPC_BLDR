@@ -382,6 +382,153 @@ footer {
             " . disclaimer disclaimer . ";
         gap: 30px;
     }
+
+    /* Animations */
+    #builds-grid {
+        justify-items: center;
+    }
+    
+    #aqua.body,
+    #terra.body,
+    #fuoco.body,
+    #glassia.body {
+        transition: all 0.5s ease;
+    }
+
+    #aqua:hover,
+    #terra:hover,
+    #fuoco:hover,
+    #glassia:hover {
+        width: 115%;
+    }
+
+    #builds-grid:has(#aqua:hover) #terra,
+    #builds-grid:has(#aqua:hover) #fuoco,
+    #builds-grid:has(#aqua:hover) #glassia,
+    #builds-grid:has(#terra:hover) #aqua,
+    #builds-grid:has(#terra:hover) #fuoco,
+    #builds-grid:has(#terra:hover) #glassia,
+    #builds-grid:has(#fuoco:hover) #aqua,
+    #builds-grid:has(#fuoco:hover) #terra,
+    #builds-grid:has(#fuoco:hover) #glassia,
+    #builds-grid:has(#glassia:hover) #aqua,
+    #builds-grid:has(#glassia:hover) #fuoco,
+    #builds-grid:has(#glassia:hover) #terra {
+        width: 95%;
+    }
+
+    #aqua:hover {
+        transform: translate(38px, 0);
+    }
+
+    #builds-grid:has(#aqua:hover) #terra {
+        transform: translate(calc(38px + 30px), 0);
+    }
+
+    #builds-grid:has(#aqua:hover) #fuoco {
+        transform: translate(calc(9px + 30px), 0);
+    }
+
+    #builds-grid:has(#aqua:hover) #glassia {
+        transform: translate(calc(-20px + 30px), 0);
+    }
+
+    #builds-grid:has(#terra:hover) #aqua {
+        transform: translate(calc(1px - 30px), 0);
+    }
+
+    #builds-grid:has(#terra:hover) #fuoco {
+        transform: translate(calc(-1px + 30px), 0);
+    }
+
+    #builds-grid:has(#terra:hover) #glassia {
+        transform: translate(calc(-30px + 30px), 0);
+    }
+
+    #builds-grid:has(#fuoco:hover) #aqua {
+        transform: translate(calc(34px - 30px), 0);
+    }
+    
+    #builds-grid:has(#fuoco:hover) #terra {
+        transform: translate(calc(1px - 30px), 0);
+    }
+
+    #builds-grid:has(#fuoco:hover) #glassia {
+        transform: translate(calc(-1px + 30px), 0);
+    }
+
+    #glassia:hover {
+        transform: translate(-38px, 0);
+    }
+    
+    #builds-grid:has(#glassia:hover) #aqua {
+        transform: translate(calc(21px - 30px), 0);
+    }
+
+    #builds-grid:has(#glassia:hover) #terra {
+        transform: translate(calc(-3px - 30px), 0);
+    }
+    
+    #builds-grid:has(#glassia:hover) #fuoco {
+        transform: translate(calc(-38px - 30px), 0);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .configure,
+    #nav-buttons.buttons {
+        transition: all 0.5s ease;
+    }
+
+    .configure:hover {
+        width: 150px;
+        border-radius: 15px 5px;
+    }
+}
+
+@media screen and (min-width: 1215px) and (max-width: 2244px) {
+    /* Animations */
+    #aqua.body:hover,
+    #terra.body:hover,
+    #fuoco.body:hover,
+    #glassia.body:hover {
+        width: 105%;
+    }
+    
+    #builds-grid:has(#aqua:hover) #terra,
+    #builds-grid:has(#terra:hover) #aqua,
+    #builds-grid:has(#fuoco:hover) #glassia,
+    #builds-grid:has(#glassia:hover) #fuoco {
+        width: 95%;
+    }
+
+    #aqua:hover,
+    #builds-grid:has(#aqua:hover) #terra,
+    #fuoco:hover,
+    #builds-grid:has(#fuoco:hover) #glassia {
+        transform: translate(12.5px, 0);
+    }
+
+    #terra:hover,
+    #builds-grid:has(#terra:hover) #aqua,
+    #glassia:hover,
+    #builds-grid:has(#glassia:hover) #fuoco {
+        transform: translate(-12.5px, 0);
+    }
+}
+
+@media screen and (min-width: 1215px) {
+    /* Animations */  
+    #builds-grid {
+        justify-items: center;
+    }
+    
+    #aqua.body,
+    #terra.body,
+    #fuoco.body,
+    #glassia.body {
+        transition: all 0.5s ease;
+    }
 }
 
 @media screen and (max-width: 800px) {
