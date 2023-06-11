@@ -84,28 +84,12 @@ body {
     margin: 0 auto 25px auto;
 }
 
-#button_profile {
-    background-image: url(SVGs/profile_icon.svg);
-}
-
-#button_settings {
-    background-image: url(SVGs/settings_icon.svg);
-}
-
 .buttons {
     height: 65px;
     width: 65px;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 5px 15px;
-}
-
-.nav-color {
-    background-color: var(--headings);
-}
-
-.heading-color {
-    background-color: var(--boxes);
 }
 
 /* Multi-selectors */
@@ -157,6 +141,18 @@ body {
 #header {
     border-bottom: 3px solid var(--dividers);
     margin: 0 75px;
+}
+
+.header-button-color {
+    background-color: var(--boxes);
+}
+
+#button_profile {
+    background-image: url(SVGs/profile_icon.svg);
+}
+
+#button_settings {
+    background-image: url(SVGs/settings_icon.svg);
 }
 
 /* Image */
@@ -368,6 +364,10 @@ footer {
     background-color: rgba(26, 0, 52, 0.75);
 }
 
+.nav-button-color {
+    background-color: var(--headings);
+}
+
 #button_about {
     background-image: url(SVGs/about_icon.svg);
 }
@@ -415,11 +415,7 @@ footer {
         gap: 30px;
     }
 
-    /* Animations */
-    #builds-grid {
-        justify-items: center;
-    }
-    
+    /* Animations */ 
     #aqua.body,
     #terra.body,
     #fuoco.body,
@@ -545,11 +541,12 @@ footer {
 }
 
 @media screen and (min-width: 1215px) {
-    /* Animations */  
+    /* Builds */
     #builds-grid {
         justify-items: center;
     }
     
+    /* Animations */  
     #aqua.body,
     #terra.body,
     #fuoco.body,
@@ -633,6 +630,7 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
+    /* Animations */
     .buttons,
     .body,
     .configure,
@@ -643,18 +641,15 @@ footer {
 
     .configure:hover {
         width: 150px;
-        border-radius: 15px 5px;
     }
     
+    .configure:hover,
     .buttons:hover {
         border-radius: 15px 5px;
     }
 
-    .heading-color:hover {
-        background-color: var(--boxes-hover);
-    }
-
     .body:hover:not(#builds-grid *.body),
+    .header-button-color:hover,
     #disclaimer-body:hover {
         background-color: var(--boxes-hover);
     }
