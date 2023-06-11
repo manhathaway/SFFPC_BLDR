@@ -4,8 +4,10 @@
 :root {
     --background: #1A0034;
     --boxes: #290048;
+    --boxes-hover: #2E0C50;
     --dividers: #EB00FF;
     --headings: #FFE500;
+    --headings-hover: #FFF914;
     --headings-text: #9B8100;
     --body-text: #A178CA;
     --aqua: #00D1FF;
@@ -83,9 +85,28 @@ body {
     margin: 0 auto 25px auto;
 }
 
-.buttons * {
+#button_profile {
+    background-image: url(/SVGs/profile_icon.svg);
+}
+
+#button_settings {
+    background-image: url(/SVGs/settings_icon.svg);
+}
+
+.buttons {
     height: 65px;
     width: 65px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px 15px;
+}
+
+.nav-color {
+    background-color: var(--headings);
+}
+
+.heading-color {
+    background-color: var(--boxes);
 }
 
 /* Multi-selectors */
@@ -348,6 +369,18 @@ footer {
     background-color: rgba(26, 0, 52, 0.75);
 }
 
+#button_about {
+    background-image: url(/SVGs/about_icon.svg);
+}
+
+#button_testimonials {
+    background-image: url(/SVGs/testimonials_icon.svg);
+}
+
+#button_builds {
+    background-image: url(/SVGs/builds_icon.svg);
+}
+
 @media screen and (min-width: 2245px) {
     /* Multi-selectors */
     #about-grid,
@@ -474,46 +507,41 @@ footer {
     }
 }
 
-@media screen and (min-width: 500px) {
-    .configure,
-    #nav-buttons.buttons {
-        transition: all 0.5s ease;
-    }
-
-    .configure:hover {
-        width: 150px;
-        border-radius: 15px 5px;
-    }
-}
-
 @media screen and (min-width: 1215px) and (max-width: 2244px) {
     /* Animations */
     #aqua.body:hover,
     #terra.body:hover,
     #fuoco.body:hover,
     #glassia.body:hover {
-        width: 105%;
+        width: 110%;
     }
     
     #builds-grid:has(#aqua:hover) #terra,
     #builds-grid:has(#terra:hover) #aqua,
     #builds-grid:has(#fuoco:hover) #glassia,
     #builds-grid:has(#glassia:hover) #fuoco {
-        width: 95%;
+        width: 90%;
+    }
+
+    #builds-grid:has(#aqua:hover) .terra.hide-text,
+    #builds-grid:has(#terra:hover) .aqua.hide-text,
+    #builds-grid:has(#fuoco:hover) .glassia.hide-text,
+    #builds-grid:has(#glassia:hover) .fuoco.hide-text {
+        color: var(--boxes);
     }
 
     #aqua:hover,
     #builds-grid:has(#aqua:hover) #terra,
     #fuoco:hover,
     #builds-grid:has(#fuoco:hover) #glassia {
-        transform: translate(12.5px, 0);
+        transform: translate(22.5px, 0);
     }
 
     #terra:hover,
     #builds-grid:has(#terra:hover) #aqua,
     #glassia:hover,
     #builds-grid:has(#glassia:hover) #fuoco {
-        transform: translate(-12.5px, 0);
+        transform: translate(-22.5px, 0);
     }
 }
 
@@ -526,7 +554,8 @@ footer {
     #aqua.body,
     #terra.body,
     #fuoco.body,
-    #glassia.body {
+    #glassia.body,
+    .hide-text {
         transition: all 0.5s ease;
     }
 }
@@ -601,6 +630,38 @@ footer {
     /* Navigation */
     #nav-buttons {
         padding: 15px 0;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .buttons,
+    .body,
+    .configure,
+    #nav-buttons.buttons,
+    #disclaimer-body {
+        transition: all 0.5s ease;
+    }
+
+    .configure:hover {
+        width: 150px;
+        border-radius: 15px 5px;
+    }
+    
+    .buttons:hover {
+        border-radius: 15px 5px;
+    }
+
+    .heading-color:hover {
+        background-color: var(--boxes-hover);
+    }
+
+    .nav-color:hover {
+        background-color: var(--headings-hover);
+    }
+
+    .body:hover:not(#builds-grid *.body),
+    #disclaimer-body:hover {
+        background-color: var(--boxes-hover);
     }
 }
 
