@@ -7,7 +7,6 @@
     --boxes-hover: #2E0C50;
     --dividers: #EB00FF;
     --headings: #FFE500;
-    --headings-hover: #FFF914;
     --headings-text: #9B8100;
     --body-text: #A178CA;
     --aqua: #00D1FF;
@@ -653,10 +652,6 @@ footer {
 
     .heading-color:hover {
         background-color: var(--boxes-hover);
-    }
-
-    .nav-color:hover {
-        background-color: var(--headings-hover);
     }
 
     .body:hover:not(#builds-grid *.body),
