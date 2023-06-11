@@ -85,11 +85,11 @@ body {
 }
 
 #button_profile {
-    background-image: url(/SVGs/profile_icon.svg);
+    background-image: url(SVGs/profile_icon.svg);
 }
 
 #button_settings {
-    background-image: url(/SVGs/settings_icon.svg);
+    background-image: url(SVGs/settings_icon.svg);
 }
 
 .buttons {
@@ -369,15 +369,15 @@ footer {
 }
 
 #button_about {
-    background-image: url(/SVGs/about_icon.svg);
+    background-image: url(SVGs/about_icon.svg);
 }
 
 #button_testimonials {
-    background-image: url(/SVGs/testimonials_icon.svg);
+    background-image: url(SVGs/testimonials_icon.svg);
 }
 
 #button_builds {
-    background-image: url(/SVGs/builds_icon.svg);
+    background-image: url(SVGs/builds_icon.svg);
 }
 
 @media screen and (min-width: 2245px) {
