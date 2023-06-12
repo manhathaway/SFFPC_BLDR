@@ -544,9 +544,10 @@ footer {
     }
     
     /* General Element Styling */
-    .buttons * {
+    .buttons {
         width: 55px;
         height: 55px;
+        border-radius: 10px 5px;
     }
 
     #about-body:after,
