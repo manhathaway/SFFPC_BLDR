@@ -157,7 +157,7 @@ body {
 
 /* Image */
 #main-image {
-    background-image: url(SVGs/PC_Aqua.svg);
+    background-image: url(SVGs/PC_Glassia.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin: 100px auto;
@@ -165,32 +165,6 @@ body {
     max-width: 675px;
     height: 55.15vw;
     max-height: 495px;
-
-    animation-name: slideshow;
-    animation-direction: alternate-reverse;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 15s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-}
-
-@keyframes slideshow {
-    0%, 13% {
-        background-image: url(SVGs/PC_Glassia.svg);
-    }
-
-    19.5%, 46.5% {
-        background-image: url(SVGs/PC_Fuoco.svg);
-    }
-
-    53%, 80% {
-        background-image: url(SVGs/PC_Terra.svg);
-    }
-
-    86.5%, 99.5% {
-        background-image: url(SVGs/PC_Aqua.svg);
-    }
 }
 
 /* About */
@@ -630,6 +604,35 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
+    /* Image */
+    #main-image {
+    animation-name: slideshow;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes slideshow {
+        0%, 13% {
+            background-image: url(SVGs/PC_Glassia.svg);
+        }
+
+        19.5%, 46.5% {
+            background-image: url(SVGs/PC_Fuoco.svg);
+        }
+
+        53%, 80% {
+            background-image: url(SVGs/PC_Terra.svg);
+        }
+
+        86.5%, 99.5% {
+            background-image: url(SVGs/PC_Aqua.svg);
+        }
+    }
+    
     /* Animations */
     .buttons,
     .body,
