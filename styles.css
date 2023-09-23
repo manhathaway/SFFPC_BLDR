@@ -8,15 +8,15 @@
     --dividers: #EB00FF;
     --headings: #FFE500;
     --headings-text: #9B8100;
-    --body-text: #A178CA;
+    --body-text: #FFFFFF;
     --aqua: #00D1FF;
     --aqua-text: #002755;
     --terra: #CCFF00;
     --terra-text: #225500;
     --fuoco: #FF7A00;
     --fuoco-text: #550000;
-    --glassia: #EB00FF;
-    --glassia-text: #410055;
+    --galassia: #EB00FF;
+    --galassia-text: #410055;
 }
 
 html {
@@ -157,7 +157,10 @@ body {
 
 /* Image */
 #main-image {
-    background-image: url(SVGs/PC_Glassia.svg);
+    background-image: url(SVGs/PC_Galassia.svg);
+}
+
+.center-image {
     background-repeat: no-repeat;
     background-size: contain;
     margin: 100px auto;
@@ -243,12 +246,15 @@ body {
 }
 
 .configure {
-	border: none;
+	display: block;
+    text-decoration: none;
+    border: none;
 	padding: 10px 0;
 	cursor: pointer;
-    width: 125px;
-    font-size: 1rem;
-    margin-top: 50px;
+    width: 150px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin:  50px auto 0 auto;
     border-radius: 5px 15px;
 }
 
@@ -276,8 +282,8 @@ body {
     color: var(--fuoco);
 }
 
-#glassia {
-    color: var(--glassia);
+#galassia {
+    color: var(--galassia);
 }
 
 #aqua > .builds-grid-heading,
@@ -298,10 +304,10 @@ body {
     color: var(--fuoco-text);
 }
 
-#glassia > .builds-grid-heading,
-#glassia > .configure {
-    background-color: var(--glassia);
-    color: var(--glassia-text);
+#galassia > .builds-grid-heading,
+#galassia > .configure {
+    background-color: var(--galassia);
+    color: var(--galassia-text);
 }
 
 /* Disclaimer */
@@ -393,29 +399,29 @@ footer {
     #aqua.body,
     #terra.body,
     #fuoco.body,
-    #glassia.body {
+    #galassia.body {
         transition: all 0.5s ease;
     }
 
     #aqua:hover,
     #terra:hover,
     #fuoco:hover,
-    #glassia:hover {
+    #galassia:hover {
         width: 115%;
     }
 
     #builds-grid:has(#aqua:hover) #terra,
     #builds-grid:has(#aqua:hover) #fuoco,
-    #builds-grid:has(#aqua:hover) #glassia,
+    #builds-grid:has(#aqua:hover) #galassia,
     #builds-grid:has(#terra:hover) #aqua,
     #builds-grid:has(#terra:hover) #fuoco,
-    #builds-grid:has(#terra:hover) #glassia,
+    #builds-grid:has(#terra:hover) #galassia,
     #builds-grid:has(#fuoco:hover) #aqua,
     #builds-grid:has(#fuoco:hover) #terra,
-    #builds-grid:has(#fuoco:hover) #glassia,
-    #builds-grid:has(#glassia:hover) #aqua,
-    #builds-grid:has(#glassia:hover) #fuoco,
-    #builds-grid:has(#glassia:hover) #terra {
+    #builds-grid:has(#fuoco:hover) #galassia,
+    #builds-grid:has(#galassia:hover) #aqua,
+    #builds-grid:has(#galassia:hover) #fuoco,
+    #builds-grid:has(#galassia:hover) #terra {
         width: 95%;
     }
 
@@ -431,7 +437,7 @@ footer {
         transform: translate(calc(9px + 30px), 0);
     }
 
-    #builds-grid:has(#aqua:hover) #glassia {
+    #builds-grid:has(#aqua:hover) #galassia {
         transform: translate(calc(-20px + 30px), 0);
     }
 
@@ -443,7 +449,7 @@ footer {
         transform: translate(calc(-1px + 30px), 0);
     }
 
-    #builds-grid:has(#terra:hover) #glassia {
+    #builds-grid:has(#terra:hover) #galassia {
         transform: translate(calc(-30px + 30px), 0);
     }
 
@@ -455,23 +461,23 @@ footer {
         transform: translate(calc(1px - 30px), 0);
     }
 
-    #builds-grid:has(#fuoco:hover) #glassia {
+    #builds-grid:has(#fuoco:hover) #galassia {
         transform: translate(calc(-1px + 30px), 0);
     }
 
-    #glassia:hover {
+    #galassia:hover {
         transform: translate(-38px, 0);
     }
     
-    #builds-grid:has(#glassia:hover) #aqua {
+    #builds-grid:has(#galassia:hover) #aqua {
         transform: translate(calc(21px - 30px), 0);
     }
 
-    #builds-grid:has(#glassia:hover) #terra {
+    #builds-grid:has(#galassia:hover) #terra {
         transform: translate(calc(-3px - 30px), 0);
     }
     
-    #builds-grid:has(#glassia:hover) #fuoco {
+    #builds-grid:has(#galassia:hover) #fuoco {
         transform: translate(calc(-38px - 30px), 0);
     }
 }
@@ -481,35 +487,35 @@ footer {
     #aqua.body:hover,
     #terra.body:hover,
     #fuoco.body:hover,
-    #glassia.body:hover {
+    #galassia.body:hover {
         width: 110%;
     }
     
     #builds-grid:has(#aqua:hover) #terra,
     #builds-grid:has(#terra:hover) #aqua,
-    #builds-grid:has(#fuoco:hover) #glassia,
-    #builds-grid:has(#glassia:hover) #fuoco {
+    #builds-grid:has(#fuoco:hover) #galassia,
+    #builds-grid:has(#galassia:hover) #fuoco {
         width: 90%;
     }
 
     #builds-grid:has(#aqua:hover) .terra.hide-text,
     #builds-grid:has(#terra:hover) .aqua.hide-text,
-    #builds-grid:has(#fuoco:hover) .glassia.hide-text,
-    #builds-grid:has(#glassia:hover) .fuoco.hide-text {
+    #builds-grid:has(#fuoco:hover) .galassia.hide-text,
+    #builds-grid:has(#galassia:hover) .fuoco.hide-text {
         color: var(--boxes);
     }
 
     #aqua:hover,
     #builds-grid:has(#aqua:hover) #terra,
     #fuoco:hover,
-    #builds-grid:has(#fuoco:hover) #glassia {
+    #builds-grid:has(#fuoco:hover) #galassia {
         transform: translate(22.5px, 0);
     }
 
     #terra:hover,
     #builds-grid:has(#terra:hover) #aqua,
-    #glassia:hover,
-    #builds-grid:has(#glassia:hover) #fuoco {
+    #galassia:hover,
+    #builds-grid:has(#galassia:hover) #fuoco {
         transform: translate(-22.5px, 0);
     }
 }
@@ -528,7 +534,7 @@ footer {
     
         @keyframes slideshow {
             0%, 13% {
-                background-image: url(SVGs/PC_Glassia.svg);
+                background-image: url(SVGs/PC_Galassia.svg);
             }
     
             19.5%, 46.5% {
@@ -553,7 +559,7 @@ footer {
     #aqua.body,
     #terra.body,
     #fuoco.body,
-    #glassia.body,
+    #galassia.body,
     .hide-text {
         transition: all 0.5s ease;
     }
